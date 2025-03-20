@@ -18,7 +18,14 @@ export default function Home() {
       </header>
       <main className="flex flex-col md:flex-row items-center justify-center text-center max-w-5xl mx-auto p-10">
         <div className="relative w-64 h-64">
-          <Image src="/profile.jpg" alt="Clara Lecuyer" layout="fill" className="rounded-xl" />
+          <Image 
+  src="/profile.jpg" 
+  alt="Clara Lécuyer" 
+  width={250} 
+  height={250} 
+  className="rounded-xl object-cover"
+/>
+
         </div>
         <div className="md:ml-10 mt-5 md:mt-0">
           <h2 className="text-5xl font-bold">Bonjour, moi c'est Clara !</h2>
