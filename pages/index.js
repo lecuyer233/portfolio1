@@ -2,62 +2,29 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col">
-      {/* Barre de navigation */}
-      <header className="w-full flex justify-between items-center p-5 max-w-6xl mx-auto">
-        
-        {/* Nom Clara Lecuyer à gauche */}
-        <h1 className="text-2xl font-bold">Clara Lecuyer</h1>
-
-        {/* Boutons centrés */}
-        <nav className="flex gap-6">
-          <button className="bg-teal-600 px-4 py-2 rounded-lg">Accueil</button>
-          <button className="bg-teal-600 px-4 py-2 rounded-lg">À propos</button>
-          <button className="bg-teal-600 px-4 py-2 rounded-lg">Projets</button>
+    <div className="bg-gray-100 text-gray-900 min-h-screen flex flex-col items-center">
+      <header className="w-full bg-white shadow-md p-5 fixed top-0 flex justify-between items-center max-w-6xl mx-auto">
+        <h1 className="text-3xl font-extrabold text-gray-800">Clara Lecuyer</h1>
+        <nav className="flex gap-4">
+          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Accueil</button>
+          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">À propos</button>
+          <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">Projets</button>
         </nav>
-
-        {/* Icônes GitHub, LinkedIn et mode sombre à droite */}
-        <div className="flex gap-4">
-          {/* GitHub */}
-          <a href="https://github.com/ton-github" target="_blank" rel="noopener noreferrer">
-            <Image src="/github.svg" alt="GitHub" width={30} height={30} />
-          </a>
-          {/* LinkedIn */}
-          <a href="https://www.linkedin.com/in/ton-linkedin" target="_blank" rel="noopener noreferrer">
-            <Image src="/linkedin.svg" alt="LinkedIn" width={30} height={30} />
-          </a>
-          {/* Mode sombre */}
-          <span className="text-2xl">🌙</span>
-        </div>
       </header>
 
-      {/* Contenu principal centré */}
-      <main className="flex flex-col md:flex-row items-center justify-center text-center max-w-5xl mx-auto p-10">
-        
-        {/* Photo Clara */}
-        <div className="relative w-64 h-64">
-          <Image 
-            src="/profile.jpg" 
-            alt="Clara Lécuyer" 
-            width={250} 
-            height={250} 
-            className="rounded-xl object-cover"
-          />
+      <main className="flex flex-col md:flex-row items-center justify-center mt-24 px-5 w-full max-w-6xl">
+        <div className="md:w-1/3 flex justify-center">
+          <Image src="/profile.jpg" width={250} height={250} className="rounded-full shadow-lg" alt="Clara Lecuyer" />
         </div>
-
-        {/* Texte à côté */}
-        <div className="md:ml-10 mt-5 md:mt-0">
-          <h2 className="text-5xl font-bold">Bonjour, moi c'est Clara !</h2>
-          <p className="mt-3 text-lg">
-            Étudiante en <span className="text-teal-500 font-semibold">Science des Données</span>, 
-            je partage avec vous mes projets d'analyse et de modélisation.
+        <div className="md:w-2/3 text-center md:text-left mt-6 md:mt-0">
+          <h2 className="text-4xl font-bold">Bonjour, moi c'est Clara !</h2>
+          <p className="mt-3 text-lg text-gray-700">
+            Étudiante en Science des Données, je partage avec vous mes projets d'analyse et de modélisation.
           </p>
-
-          {/* Boutons en dessous */}
-          <div className="flex gap-4 mt-5">
-            <button className="bg-teal-600 px-4 py-2 rounded-lg">Data Analysis</button>
-            <button className="bg-teal-600 px-4 py-2 rounded-lg">Data Science</button>
-            <button className="bg-teal-600 px-4 py-2 rounded-lg">Machine Learning</button>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold">Data Analysis</span>
+            <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold">Data Science</span>
+            <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold">Machine Learning</span>
           </div>
         </div>
       </main>
