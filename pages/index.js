@@ -3,13 +3,19 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center">
+      {/* Barre de navigation */}
       <header className="w-full flex justify-between items-center p-5 max-w-6xl mx-auto">
+        {/* Nom à gauche */}
         <h1 className="text-2xl font-bold">Clara Lecuyer</h1>
+
+        {/* Boutons centrés */}
         <nav className="flex gap-4">
           <button className="bg-teal-600 px-4 py-2 rounded-lg">Accueil</button>
           <button className="bg-teal-600 px-4 py-2 rounded-lg">À propos</button>
           <button className="bg-teal-600 px-4 py-2 rounded-lg">Projets</button>
         </nav>
+
+        {/* Icônes à droite */}
         <div className="flex gap-3">
           {/* Icône GitHub */}
           <a href="https://github.com/ton-github" target="_blank" rel="noopener noreferrer">
@@ -23,6 +29,8 @@ export default function Home() {
           <span>🌙</span>
         </div>
       </header>
+
+      {/* Contenu principal */}
       <main className="flex flex-col md:flex-row items-center justify-center text-center max-w-5xl mx-auto p-10">
         <div className="relative w-64 h-64">
           <Image 
@@ -49,4 +57,5 @@ export default function Home() {
     </div>
   );
 }
+
 
