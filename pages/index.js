@@ -11,21 +11,27 @@ export default function Home() {
           <button className="bg-teal-600 px-4 py-2 rounded-lg">Projets</button>
         </nav>
         <div className="flex gap-3">
+          {/* Icône GitHub */}
+          <a href="https://github.com/ton-github" target="_blank" rel="noopener noreferrer">
+            <Image src="/github.svg" alt="GitHub" width={30} height={30} />
+          </a>
+          {/* Icône LinkedIn */}
+          <a href="https://www.linkedin.com/in/ton-linkedin" target="_blank" rel="noopener noreferrer">
+            <Image src="/linkedin.svg" alt="LinkedIn" width={30} height={30} />
+          </a>
+          {/* Mode sombre */}
           <span>🌙</span>
-          <span>🔗</span>
-          <span>🐙</span>
         </div>
       </header>
       <main className="flex flex-col md:flex-row items-center justify-center text-center max-w-5xl mx-auto p-10">
         <div className="relative w-64 h-64">
           <Image 
-  src="/profile.jpg" 
-  alt="Clara Lécuyer" 
-  width={250} 
-  height={250} 
-  className="rounded-xl object-cover"
-/>
-
+            src="/profile.jpg" 
+            alt="Clara Lécuyer" 
+            width={250} 
+            height={250} 
+            className="rounded-xl object-cover"
+          />
         </div>
         <div className="md:ml-10 mt-5 md:mt-0">
           <h2 className="text-5xl font-bold">Bonjour, moi c'est Clara !</h2>
@@ -43,3 +49,4 @@ export default function Home() {
     </div>
   );
 }
+
